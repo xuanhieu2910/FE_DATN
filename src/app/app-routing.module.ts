@@ -8,10 +8,10 @@ const routes: Routes = [
     component: AuthComponent,
     loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule)
   },
-  {
-    path: '**',
-    redirectTo: ''
-  }
+  // {
+  //   path: '**',
+  //   redirectTo: ''
+  // }
 ];
 
 @NgModule({
