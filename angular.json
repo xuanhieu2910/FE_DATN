@@ -1,18 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "masterStudy": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -27,13 +20,13 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css",
+              "src/assets",
               "src/assets/css/bootstrap-icons.css",
               "src/assets/css/responsive.css",
               "src/assets/css/custom-style.css"
+            ],
+            "styles": [
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -110,3 +103,4 @@
   },
   "defaultProject": "masterStudy"
 }
+
