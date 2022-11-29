@@ -1,0 +1,122 @@
+<header class="header">
+  <div class="header-inner">
+    <nav class="navbar navbar-expand-lg bg-master-study master-study-head navbar fixed-top justify-content-sm-start pt-0 pb-0 ps-lg-0 pe-2">
+      <div class="container-fluid ps-0">
+        <button id="collapse_menu" class="collapse_menu me-4">
+          <i class="fa-solid fa-bars collapse_menu--icon "></i>
+          <span class="collapse_menu--label"></span>
+        </button>
+
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" routerLink="">
+          <div class="res-main-logo">
+<!--            <img src="assets/images/logo-icon.svg" alt="">-->
+          </div>
+          <div class="main-logo" id="logo">
+<!--            <img src="assets/images/logo.svg" alt="">-->
+<!--            <img class="logo-inverse" src="assets/images/dark-logo.svg" alt="">-->
+          </div>
+        </a>
+        <div class="right-header order-2">
+          <ul class="align-self-stretch">
+            <button pButton pRipple type="button" label="Tạo bài giảng" icon="bi bi-plus-square ml-2" class="p-button-raised"></button>
+
+
+<!--            <li class="dropdown account-dropdown order-3" (click)="showAccountInfo.toggle($event)">-->
+<!--              <div class="account-link cursor-pointer" [class.show]="showAccountInfo.overlayVisible" >-->
+<!--                <img src="{{userDetail.logoImg}}" alt="{{'alt_image.image_avatar'|translate}}"-->
+<!--                     onerror="this.src='../../../../../assets/images/default-avatar.jpg'">-->
+<!--              </div>-->
+<!--            </li>-->
+            <li class="h_40">
+              <button type="button" class="toggle_menu">
+                                    <span>
+                                        <i class="fa-solid fa-bars"></i>
+                                    </span>
+              </button>
+            </li>
+            <!--                        <li>-->
+            <!--                            <div class="night_mode_switch__btn">-->
+            <!--                                <div id="night-mode" class="fas fa-moon fa-sun"></div>-->
+            <!--                            </div>-->
+            <!--                        </li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="overlay"></div>
+  </div>
+</header>
+<div class="menu-bottom-mobile d-flex align-items-center">
+  <div class="row align-items-center full-width mr-0 ml-0">
+    <div class="col-4">
+      <div class="menu-bottom_item d-flex justify-content-center">
+        <div [routerLink]="['/']"
+             [routerLinkActiveOptions]="{exact: true}"
+             routerLinkActive="active"
+             class="menu-bottom_icon menu-home"></div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="menu-bottom_item d-flex justify-content-center">
+        <div class="menu-bottom_icon menu-admin"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: false}"
+             [routerLink]="['/create-ticket']"></div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="menu-bottom_item d-flex justify-content-center">
+        <div [routerLink]="['/my-profile']" routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact: false}"
+             class="menu-bottom_icon menu-profile"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<p-overlayPanel #selectLang styleClass="overlay_zIndex_10000 unset_mw p-0" >-->
+<!--  <ng-template pTemplate="">-->
+<!--    <ul class=" dropdown-menu-account border-top-0 dropdown-menu-end mt-0">-->
+<!--      <li class="profile-link" >-->
+<!--        <a class="link-item cursor-pointer link-item__language"-->
+<!--           *ngFor="let lang of listLang"-->
+<!--           [class.active]="lang.code===currentLangCode"-->
+<!--           (click)="selectLanguage(lang.code);selectLang.hide()">-->
+<!--          <img [src]="lang.image"-->
+<!--               class="link-item__flag"/>{{lang.name}}</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </ng-template>-->
+<!--</p-overlayPanel>-->
+
+
+<!--<p-overlayPanel #showAccountInfo styleClass="unset_mw overlay_zIndex_10000 p-0">-->
+<!--  <ng-template pTemplate="" >-->
+<!--    <ul class="dropdown-menu-account border-top-0 dropdown-menu-end">-->
+<!--      <li>-->
+<!--        <div class="dropdown-account-header">-->
+<!--          <div class="account-holder-avatar">-->
+<!--            <img src="{{userDetail ? userDetail.logoImg : ''}}" alt="{{'alt_image.image_avatar'|translate}}"-->
+<!--                 onerror=" this.src='assets/images/default-avatar.jpg'">-->
+<!--          </div>-->
+<!--          <h5>{{userDetail.name}}</h5>-->
+<!--          <p class="break-text-2 text-center">{{userDetail.email}}</p>-->
+<!--          <p class="d-flex align-items-center justify-content-center">-->
+<!--            <img src="../../../../../assets/images/icons/wallet-icon-small-1.svg"-->
+<!--                 alt="{{'alt_image.wallet-icon'|translate}}"-->
+<!--                 class="mr-1"/>-->
+<!--            <span-->
+<!--              class="font-14"> {{userDetail.moneyWallet || 0 | currencyLocalize: currentLangCode}}</span>-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </li>-->
+<!--      <li class="profile-link border-top">-->
+<!--        <a [routerLink]="'/my-profile/home'"-->
+<!--           (click)="showAccountInfo.hide()"-->
+<!--           class="link-item">{{'my-profile.self' | translate}}</a>-->
+<!--        <a (click)="logout();showAccountInfo.hide()"-->
+<!--           class="link-item">{{'my-admin.header-admin.sign-out' | translate}}</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </ng-template>-->
+<!--</p-overlayPanel>-->

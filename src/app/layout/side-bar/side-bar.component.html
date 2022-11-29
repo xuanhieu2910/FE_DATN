@@ -1,0 +1,39 @@
+<nav class="vertical_nav vertical_nav__minify custom-scrollbar" id="navbarAdmin">
+  <div class="left_section menu_left mb-3" id="js-menu">
+    <ul id="accordionCustom" class="accordion-custom">
+      <li class="menu-item_custom open position-relative" *ngFor="let item of menuAdmin">
+        <div class="link d-flex align-items-center justify-content-between single-link"
+             [routerLinkActive]="'active'"
+             [routerLink]="[item.path]"
+             [routerLinkActiveOptions]="RouteOption"
+             *ngIf="!item.hasChild">
+          <div class="d-flex align-items-center">
+            <i class="{{item.icon}}"></i>
+            <span class="title-name ml-2">{{item.title }}</span>
+          </div>
+        </div>
+        <div class="link d-flex align-items-center justify-content-between"
+             *ngIf="item.hasChild">
+          <div class="d-flex align-items-center">
+            <i class="{{item.icon}}"></i>
+            <span class="title-name ml-2">{{item.title }}</span>
+          </div>
+          <i class="fa fa-chevron-down" *ngIf="item.hasChild"></i>
+        </div>
+        <ul class="submenu-custom" *ngIf="item.hasChild">
+          <li *ngFor="let childItem of item.childMenu">
+            <a [routerLinkActive]="'active'"
+               class="child-menu"
+               [routerLinkActiveOptions]="{exact: true}"
+               [routerLink]="[childItem.path]">{{childItem.title}}</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item_custom open position-relative">
+        <div class="d-flex align-items-center" style="min-height: 60px "></div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+

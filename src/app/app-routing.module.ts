@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {AuthComponent} from "./auth/auth.component";
+import {PagesComponent} from "./pages/pages.component";
 
 const routes: Routes = [
   {
@@ -8,10 +9,16 @@ const routes: Routes = [
     component: AuthComponent,
     loadChildren: () => import('./auth/auth.module').then(module => module.AuthModule)
   },
-  // {
-  //   path: '**',
-  //   redirectTo: ''
-  // }
+  {
+    path: '',
+    component: PagesComponent,
+    pathMatch: "full",
+    loadChildren: () => import('./pages/pages.module').then(module => module.PagesModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({

@@ -20,18 +20,32 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              "src/assets"
             ],
             "styles": [
+              "src/assets/css/custom-style.css",
               "src/styles.css",
+              "src/assets/css/bootstrap-icons.css",
+              "src/assets/css/jquery.mCustomScrollbar.css",
+              "src/assets/css/jquery-steps.css",
+              "src/assets/css/responsive.css",
+              "src/assets/vendor/fontawesome-free/css/all.min.css",
+              "src/assets/vendor/OwlCarousel/assets/owl.carousel.css",
+              "src/assets/vendor/OwlCarousel/assets/owl.theme.default.min.css",
+              "src/assets/vendor/bootstrap/css/bootstrap.min.css",
+              "src/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css",
+              "src/assets/css/vertical-responsive-menu.min.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "src/assets/css/bootstrap-icons.css",
-              "src/assets/css/responsive.css",
-              "src/assets/css/custom-style.css"
+              "node_modules/primeng/resources/primeng.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.6.0.min.js",
+              "src/assets/js/custom.js",
+              "src/assets/js/jquery.mCustomScrollbar.js",
+              "src/assets/js/Scrollbar.js",
+              "src/assets/js/vertical-responsive-menu.js"
+            ]
           },
           "configurations": {
             "production": {
